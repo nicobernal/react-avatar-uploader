@@ -33,7 +33,7 @@ export default class AvatarUploader extends Component {
 
                 avatarForm.append(name, avatar, avatar.name);
 
-                const res = await axios.post(uploadURL, avatarForm, {
+                const res = await axios.put(uploadURL, avatarForm, {
                     withCredentials,
                     headers: customHeaders ? customHeaders : null,
                     onUploadProgress: progressEvent => {
